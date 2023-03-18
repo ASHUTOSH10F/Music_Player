@@ -1,0 +1,47 @@
+                    img
+					{
+					    width: 1.9rem;
+                         border: 2px solid #fab6;
+                         border-radius: 3rem;
+						 margin-right: 2rem;
+						 margin-right: 2rem;
+                         margin-top: -2rem;
+                         margin-bottom: 2rem;
+                         float: left;
+					}
+					#main-box
+					{
+						text-align: end;
+						background: url(media/hadphone.jpg);
+                        height: 26rem;
+                        width: 47rem;
+                        margin: auto;
+                        background-repeat: repeat-y;
+	                    margin-top: 5rem;	
+					}
+					#box
+					{
+						line-height: 0;
+						line-height: 0;
+						padding: 1rem;
+					}
+					#button
+                         {
+                    text-align: end;
+                    padding-right: 1rem;
+                    padding-top: 3px;
+                    margin-top: 5rem;
+	                font-family: serif;
+					margin-top: -15px;}
+#A1
+{
+	padding: 3px;
+}
+
+.logo
+{
+	    font-size: 6rem;
+    margin-top: -9rem;
+    margin-right: 3rem;
+    color: lightyellow;
+}

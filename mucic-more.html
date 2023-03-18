@@ -1,0 +1,250 @@
+<! doctype html>
+<html>
+	<head>
+		<title>
+			MORE
+		</title>
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+			    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+			    <link rel="stylesheet" href="music%20more.css" type="text/css"/>
+		<body>
+     <div id="main-box">
+	         <div class="d-flex flex-column" id="box">
+	         <div id="button">
+					<a type="button" href="music.html" class="btn btn-outline-dark">HOEM</a>
+					<a type="button" href="#" class="btn btn-warning">MORE</a>
+				 <a type="button" href="music%20about.html" class="btn btn-outline-danger">ABOUT</a>
+			</div>
+	     <a href="#">
+		     <div class="p-1 ">
+		     <img src="media/play.jpg" id="btn1">
+				 <i class="far fa-heart"></i>
+            <p id="msg1"></p>
+            </div>
+            </a>
+	        <a href="#">
+	        <div class="p-1 ">
+	        <img src="media/play.jpg" id="btn2">
+	        <img src="media/like%20btn1.png" id="A1" ondblclick="like()" onclick="likeChange()">
+	        </div>
+	        </a>
+			 <a href="#"><div class="p-1 "><img src="media/play.jpg" id="btn3"></div></a>
+			 <a href="#"><div class="p-1 "><img src="media/play.jpg" id="btn4"></div></a>
+			 <a href="#"><div class="p-1 "><img src="media/play.jpg" id="btn5"></div></a>
+			 <a href="#"><div class="p-1 "><img src="media/play.jpg" id="btn6"></div></a>
+			 <a href="#"><div class="p-1 "><img src="media/play.jpg" id="btn7"></div></a>
+			 <a href="#"><div class="p-1 "><img src="media/play.jpg" id="btn8"></div> </a>
+			 <a href="#"><div class="p-1 "><img src="media/play.jpg" id="btn9"></div></a>
+			 <a href="#"><div class="p-1 "><img src="media/play.jpg" id="btn10"></div></a><p id="message"> 
+			
+		 </div> 
+			 </div>
+		<audio id="song1" class="song">
+			<source src="media/hey%20ram1.mp3" type="audio/mp3">
+		</audio>
+		<audio id="song2" class="song">
+			<source src="media/28%20SHREE%20HANUMAN%20CHALISA.mp3" type="audio/mp3">
+		</audio>
+		<audio id="song3" class="song">
+			<source src="media/Aarambh_hai_Prachand_-_%E0%A4%A7%E0%A4%B0%E0%A5%8D%E0%A4%AE_%E0%A4%94%E0%A4%B0_%E0%A4%85%E0%A4%A7%E0%A4%B0%E0%A5%8D%E0%A4%AE_%E0%A4%95%E0%A4%BE_%E0%A4%AE%E0%A4%B9%E0%A4%BE%E0%A4%AF%E0%A5%81%E0%A4%A6%E0%A5%8D%E0%A4%A7(128k).m4a" type="audio/mp3">
+		</audio>
+		<audio id="song4" class="song">
+			<source src="media/aarti%20kunj%20bihari%20ki%20aarti%20-%20Copy.mp3" type="audio/mp3">
+		</audio>
+		<audio id="song5" class="song">
+			<source src="media/Aarti_Raghunandan_Ki_-_S.P.Balu_-_Chorus%20-%20Copy.mp3" type="audio/mp3">
+		</audio>
+		<audio id="song6" class="song">
+			<source src="media/Ab%20Meri%20Bhi%20Suno%20He%20Mat%20Dholki%20Mix%5BDj%20Jk%5D.mp3" type="audio/mp3">
+		</audio>
+		<audio id="song7" class="song">
+			<source src="media/Bhole_Chale(128k).m4a" type="audio/mp3">
+		</audio>
+		<audio id="song8" class="song">
+			<source src="media/Kailash_Kher_-_Bam_Lahiri.mp3" type="audio/mp3">
+		</audio>
+		<audio id="song9" class="song">
+			<source src="media/Shiv_Tandav_Stotram_-_with_Sanskrit_lyrics.mp3" type="audio/mp3">
+		</audio>
+		<audio id="song10" class="song">
+			<source src="media/%E0%A4%95%E0%A5%88%E0%A4%B2%E0%A4%BE%E0%A4%B6_%E0%A4%96%E0%A5%87%E0%A4%B0_%E0%A4%95%E0%A4%BE_%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B8%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%A7_%E0%A4%AD%E0%A4%9C%E0%A4%A8_%E0%A5%A4_%E0%A4%8F%E0%A4%95_%E0%A4%AC%E0%A4%BE%E0%A4%B0_%E0%A4%85%E0%A4%B5%E0%A4%B6%E0%A5%8D%E0%A4%AF_%E0%A4%B8%E0%A5%81%E0%A4%A8%E0%A5%87_%E0%A5%A4(256k).mp3" type="audio/mp3">
+		</audio>	
+		<script>
+		var data = document.getElementsByClassName('song');
+
+		var song1 = document.getElementById("song1");
+			var icon = document.getElementById("btn1")
+			
+			icon.onclick = function(){
+				if(song1.paused){
+			        for(var i=0;i<data.length;i++){
+						data[i].pause();
+					}
+						
+					song1.play();
+					icon.src = "media/pause1.jpg";
+					document.getElementById('msg1').innerHTML="This is  first song";
+				}else{
+						song1.pause();
+					    icon.src = "media/play.jpg";
+				}
+			}
+			
+			var song2 = document.getElementById("song2")
+			var icon1 = document.getElementById("btn2")
+			
+			icon1.onclick =  function(){
+				if(song2.paused){
+					for(var i=0;i<data.length;i++){
+						data[i].pause();
+					}
+					song2.play();
+					icon1.src = "media/pause1.jpg";
+					document.getElementById('msg1').innerHTML="this is second song";
+				}else{
+					song2.pause();
+					icon1.src = "media/play.jpg";
+				}
+			}
+			
+			
+			
+			
+			var song3 =document.getElementById("song3")
+			var icon2 = document.getElementById("btn3")
+			 icon2.onclick = function(){
+				 if(song3.paused){
+					 song3.play()
+					 icon2.src="media/pause1.jpg";
+				 }else{
+					 song3.pause();
+					 icon2.src="media/play.jpg";
+				 }
+			 }
+			 
+			 var song4 =document.getElementById("song4")
+			var icon3 = document.getElementById("btn4")
+			 icon3.onclick = function(){
+				 if(song4.paused){
+					 for(var i=0;i<data.length;i++){
+						data[i].pause();
+					}
+					 song4.play()
+					 icon3.src="media/pause1.jpg";
+				 }else{
+					 song4.pause();
+					 icon3.src="media/play.jpg";
+				 }
+			 }
+			 
+			 
+			 var song5 =document.getElementById("song5")
+			var icon4 = document.getElementById("btn5")
+			 icon4.onclick = function(){
+				 if(song5.paused){
+					 for(var i=0;i<data.length;i++){
+						data[i].pause();
+					}
+					 song5.play()
+					 icon4.src="media/pause1.jpg";
+				 }else{
+					 song5.pause();
+					 icon4.src="media/play.jpg";
+				 }
+			 }
+			 
+			 
+			 var song6 =document.getElementById("song6")
+			var icon5 = document.getElementById("btn6")
+			 icon5.onclick = function(){
+				 if(song6.paused){
+					 for(var i=0;i<data.length;i++){
+						data[i].pause();
+					}
+					 song6.play()
+					 icon5.src="media/pause1.jpg";
+				 }else{
+					 song6.pause();
+					 icon5.src="media/play.jpg";
+				 }
+			 }
+			 
+			 
+			 var song7 =document.getElementById("song7")
+			var icon6 = document.getElementById("btn7")
+			 icon6.onclick = function(){
+				 if(song7.paused){
+					 for(var i=0;i<data.length;i++){
+						data[i].pause();
+					}
+					 song7.play()
+					 icon6.src="media/pause1.jpg";
+				 }else{
+					 song7.pause();
+					 icon6.src="media/play.jpg";
+				 }
+			 }
+			 
+			 
+			 var song8 =document.getElementById("song8")
+			var icon7 = document.getElementById("btn8")
+			 icon7.onclick = function(){
+				 if(song8.paused){
+					 for(var i=0;i<data.length;i++){
+						data[i].pause();
+					}
+					 song8.play()
+					 icon7.src="media/pause1.jpg";
+				 }else{
+					 song8.pause();
+					 icon7.src="media/play.jpg";
+				 }
+			 }
+			 
+			 var song9 =document.getElementById("song9")
+			var icon8 = document.getElementById("btn9")
+			 icon8.onclick = function(){
+				 if(song9.paused){
+					 for(var i=0;i<data.length;i++){
+						data[i].pause();
+					}
+					 song9.play()
+					 icon8.src="media/pause1.jpg";
+				 }else{
+					 song9.pause();
+					 icon8.src="media/play.jpg";
+				 }
+			 }
+			 
+			 
+			 var song10 =document.getElementById("song10")
+			var icon9 = document.getElementById("btn10")
+			 icon9.onclick = function(){
+				 if(song10.paused){
+					 for(var i=0;i<data.length;i++){
+						data[i].pause();
+					}
+					 song10.play()
+					 icon9.src="media/pause1.jpg";
+				 }else{
+					 song10.pause();
+					 icon9.src="media/play.jpg";
+				 }
+			 }
+			
+			 function like()
+			{
+				var l = document.getElementById("A1")
+				l.style.backgroundColor="lightsalmon"
+			}
+			 function likeChange()
+			{
+				var c = document.getElementById("A1")
+				c.style.backgroundColor="white";
+			}
+	
+			
+		</script>
+	</body>
+	</head>
+</html>

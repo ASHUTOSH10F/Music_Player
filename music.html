@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="music.css"/>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+     
+		<title> MUSIC</title>
+		<body>
+			<div id="main-box">
+		    <i class="fab fa-asymmetrik"></i>
+				<div id="button">
+					<a type="button" href="#" class="btn btn-dark">HOEM</a>
+					<a type="button" href="mucic-more.html" class="btn btn-outline-warning">MORE</a>
+					<a type="button" href="music%20about.html" class="btn btn-outline-danger">ABOUT</a>
+				</div>
+				 <p id="message"><i class="fas fa-music"></i> is the <br>shorthand<br> of the emotion</p>
+				<img src="media/play.jpg" id="play-btn">
+				<p id="click"> click here to listen </p>
+			</div>
+			
+			<audio id="mysong">
+				<source src="media/hey%20ram1.mp3" type="audio/mp3">
+			</audio>
+		
+			<script>
+			var mysong = document.getElementById("mysong");
+			var icon = document.getElementById("play-btn")
+			
+			icon.onclick = function(){
+				if(mysong.paused){
+					mysong.play();
+					icon.src = "media/pause1.jpg";
+				}else{
+						mysong.pause();
+					    icon.src = "media/play.jpg";
+					}
+				}
+			</script>
+<div class="fa-3x">
+	<i class="fa-solid fa-circle-plus fa-beat"></i>
+	<i class="fa-solid fa-heart fa-beat"></i>
+	<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s;" ></i>
+	<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 2s;"></i>
+	<i class="fa-solid fa-heart fa-beat" style="--fa-beat-scale: 2.0;"></i>
+  </div>
+
+		</body>
+	</head>
+</html>
